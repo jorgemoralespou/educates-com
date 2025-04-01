@@ -1,0 +1,1 @@
+export const EDUCATES_PROJECT_URL = 'https://educates.dev' 

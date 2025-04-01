@@ -1,0 +1,73 @@
+.section-box {
+  width: 100%;
+  background: inherit;
+}
+
+.section-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.section-container.section-odd {
+  background: #cbe1f0;
+}
+
+.section-container.section-even {
+  background: white;
+}
+
+.section-content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .section-content {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .section-content {
+    max-width: 720px;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Medium devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+  .section-content {
+    max-width: 960px;
+    padding: 0 2rem;
+  }
+}
+
+/* Large devices (large desktops, 1200px and down) */
+@media (max-width: 1200px) {
+  .section-content {
+    max-width: 1140px;
+    padding: 0 2.5rem;
+  }
+}
+
+/* Above 1200px */
+@media (max-width: 2200px) {
+  .section-content {
+    max-width: 2160px;
+    padding: 0 3rem;
+  }
+} 
+
+@media (min-width: 2201px) {
+  .section-content {
+    max-width: 2200px;
+    padding: 0 3.5rem;
+  }
+} 
