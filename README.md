@@ -31,12 +31,18 @@ You can either build the container locally or pull the pre-built image from GitH
 
 ### Using Pre-built Image
 
+The container images are available for multiple architectures:
+- linux/amd64 (Intel/AMD 64-bit)
+- linux/arm64 (ARM 64-bit)
+
+Docker will automatically pull the correct image for your platform:
+
 ```bash
 # Pull the latest image
-docker pull ghcr.io/jorgemoralespou/educates.com:main
+docker pull ghcr.io/jorgemoralespou/educates-com:main
 
 # Run the container
-docker run -d -p 8080:80 --name educates-website ghcr.io/jorgemoralespou/educates.com:main
+docker run -d -p 8080:80 --name educates-website ghcr.io/jorgemoralespou/educates-com:main
 ```
 
 ### Building Locally
@@ -75,7 +81,8 @@ This project uses GitHub Actions for continuous integration and deployment:
 - Every push to the main branch builds and pushes a new Docker image to GitHub Container Registry
 - Tagged releases (v*.*.* format) create versioned images
 - Pull requests trigger builds but don't push to the registry
-- Images are available at `ghcr.io/jorgemoralespou/educates.com`
+- Images are available at `ghcr.io/jorgemoralespou/educates-com`
+- Multi-architecture support: builds for both AMD64 and ARM64 platforms
 
 Available tags:
 - `main` - Latest build from the main branch
@@ -83,3 +90,7 @@ Available tags:
 - `v1.0` - Latest patch release of 1.0
 - `v1` - Latest minor release of major version 1
 - `sha-<commit>` - Specific commit build
+
+Each tag is available for both AMD64 and ARM64 architectures, allowing the image to run natively on:
+- Intel/AMD based systems (most PCs and servers)
+- ARM-based systems (Apple Silicon Macs, AWS Graviton, etc.)
